@@ -435,9 +435,10 @@ input[type='checkbox'] {
 	padding-bottom: 0.25rem;
 }
 
+/* May need resizing depneding on image logo size*/
 .navbar .logo-image img {
-    width: 150px;
-	height: 24px;
+    width: 96.77px;
+	height: 45px;
 }
 
 .navbar .logo-text {
