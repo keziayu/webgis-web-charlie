@@ -493,7 +493,7 @@
             center: [-100.0, 50.0]
         });
         // Modify this to place your own map service URL here. Show one or more provinces--do not just show Ontario like this example. 
-        var url = 'https://luna.flemingcollege.ca/arcgis/rest/services/Geom99lab1/HoweCanada/MapServer/0/query?where=PRNAME%3D%27Manitoba%27&returnGeometry=true&returnTrueCurves=false&returnExtentOnly=false&f=geojson';
+        var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name+IS+NOT+NULL&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&returnZ=false&returnM=false&returnExceededLimitFeatures=true&sqlFormat=none&f=geojson';
         // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name%20IS%20NOT%20NULL&returnGeometry=true&f=geojson';
 
         map.on('load', function() {
