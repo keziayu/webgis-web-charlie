@@ -1,0 +1,12 @@
+"Managers can take advantage of tools like web maps to visualize food chain distribution and focus on developing food resources to incease food security in the area.
+
+Users can go online in a mobile friendly web map to find fresh foods in the Cobourg area."
+"There is no online resource for food banks users available due to the covid pandemic. Community members do not currently have access to regualry updated food security data.
+
+There is no web platform available for food availability in the Cobourg area. "
+"Lack of accessibility and visualization of the food supply chains and users do not know how to allocate resources from different locations. 
+
+Users continue to lack support in finding food and failure to access food resources."
+"Get foodbank and food resources data into mapbox and create a map of food resources in the Town of Cobourg. Embed map into website that's hosted on Github.
+
+Create a web map with local fresh food locations that is accessible to users. "
