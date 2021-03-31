@@ -18,8 +18,6 @@ It might be beneficial to ensure the GeoJSON file of all your points are prepped
 4. Select the GeoJSON file you want to upload. Create and confirm.
 5. Drawing new features, and adding properties are all possible in the mapbox studio
 
-![Upload GeoJSON Picture](https://docs.mapbox.com/help/assets/tutorials--add-points-dataset-upload-960-f88a0f31d1c0d6c179b95ec0c0fae2af.png)
-
 ![Points Editing](https://docs.mapbox.com/help/img/studio/point-tutorial-dataset-edit.gif)
 
 ### Exporting the dataset as tileset
