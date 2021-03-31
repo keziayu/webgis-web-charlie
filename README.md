@@ -25,4 +25,8 @@ It might be beneficial to ensure the GeoJSON file of all your points are prepped
 ### Exporting the dataset as tileset
 The difference between ArcGIS REST Endpoint and Mapbox is that the REST endpoints does a transformation process to fit into the Mapbox web format. It is not considered native and unexpected issues such as projection differences could toss it into chaos. Exporting the dataset as a tileset in mapbox can make it possible to be added into a Mapbox style.
 
+![Exporting as tileset](https://docs.mapbox.com/help/assets/tutorials--add-points-export-to-tileset-960-cd49ef2de90671c42df9a9dd6574c220.png)
+
 According to Mapbox: *Web maps are comprised of map tiles. A collection of tiles is called a tileset. Mapbox cuts up data into tiles that are then added to a web map and displayed at various zoom levels. To make Mapbox maps more performant, a dataset's features are simplified when it is converted into a tileset.*
+
+![Mapbox Tileview](https://user-images.githubusercontent.com/60511633/113148685-239bcb00-9200-11eb-99f2-1052fce00b55.png)
