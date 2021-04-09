@@ -68,9 +68,6 @@
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#about">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link page-scroll" href="#contact">Contact</a>
-                    </li>
                 </ul>
                 <span class="nav-item social-icons">
                     <span class="fa-stack">
@@ -382,49 +379,6 @@
     </div> <!-- end of basic-6 -->
     <!-- end of invitation -->
 
-
-    <!-- Contact -->
-    <div id="contact" class="form-1">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h2 class="h2-heading">Contact details</h2>
-                    <p class="p-heading">Don't hesitate to send your questions through the contact form or <a class="blue no-line" href="mailto:contact@gemdev.com">contact@gemdev.com</a></p>
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Contact Form -->
-                    <div class="form-container">
-                        <img class="decoration" src="images/contact-envelope.svg" alt="alternative"> 
-                        <form>
-                            <div class="form-group">
-                                <input type="text" class="form-control-input" id="cname" required>
-                                <label class="label-control" for="cname">Name</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control-input" id="cemail" required>
-                                <label class="label-control" for="cemail">Email</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control-textarea" id="cmessage" required></textarea>
-                                <label class="label-control" for="cmessage">Your message</label>
-                            </div>
-                            <div class="form-group">
-                                <button type="submit" class="form-control-submit-button">Submit Message</button>
-                            </div>
-                        </form>
-                    </div> <!-- end of form-container -->
-                    <!-- end of contact form -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-        </div> <!-- end of container -->
-    </div> <!-- end of form-1 -->
-    <!-- end of contact -->
-
-
     <!-- Footer -->
     <div class="footer bg-gray">
         <div class="container">
@@ -490,8 +444,8 @@
         var map = new mapboxgl.Map({
             container: 'map',
             style: 'mapbox://styles/howe2020/ckmjpi3uc6mg417n4haddm7cg',
-            zoom: 3,
-            center: [-100.0, 50.0]
+            zoom: 9,
+            center: [-78.00, 44.10]
         });
         // Modify this to place your own map service URL here. Show one or more provinces--do not just show Ontario like this example. 
         var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name+IS+NOT+NULL&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&returnZ=false&returnM=false&returnExceededLimitFeatures=true&sqlFormat=none&f=geojson';
