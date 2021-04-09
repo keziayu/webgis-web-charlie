@@ -493,24 +493,86 @@
             zoom: 9,
             center: [-78.00, 44.10]
         });
-        // Modify this to place your own map service URL here. Show one or more provinces--do not just show Ontario like this example. 
-        var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name+IS+NOT+NULL&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&returnZ=false&returnM=false&returnExceededLimitFeatures=true&sqlFormat=none&f=geojson';
-        // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name%20IS%20NOT%20NULL&returnGeometry=true&f=geojson';
 
-        map.on('load', function() {
-            window.setInterval(function() {
-                map.getSource('canada').setData(url);
-            }, 2000);
-    
-            map.addSource('canada', { type: 'geojson', data: url });
-            map.addLayer({
-                'id': 'canada',
-                'type': 'fill',
-                'source': 'canada',
-                'layout': {},
-                'paint': {'fill-color': '#088','fill-opacity': 0.8}
-            });
+        map.on('load', function () {
+            // Add an image to use as a custom marker
+            map.loadImage(
+                'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+                function (error, image) {
+                    if (error) throw error;
+                    map.addImage('custom-marker', image);
+                    // Add a GeoJSON source with 2 points
+                    map.addSource('points', {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'FeatureCollection',
+                            'features': [
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -77.884305, 44.200633
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Foodbank'
+                                    }
+                                }, 
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.077844, 44.166839
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Foodbank2'
+                                    }
+                                }
+                            ]
+                        }
+                    });
+
+                    // Add a symbol layer
+                    map.addLayer({
+                        'id': 'points',
+                        'type': 'symbol',
+                        'source': 'points',
+                        'layout': {
+                            'icon-image': 'custom-marker',
+                            // get the title name from the source's "title" property
+                            'text-field': ['get','title'],
+                            'text-font': [
+                                'Open Sans Semibold',
+                                'Arial Unicode MS Bold'
+                            ],
+                            'text-offset': [0, 1.25],
+                            'text-anchor': 'top'
+                        }
+                    });
+                }
+            );
         });
+        // // Modify this to place your own map service URL here. Show one or more provinces--do not just show Ontario like this example. 
+        // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name+IS+NOT+NULL&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&returnZ=false&returnM=false&returnExceededLimitFeatures=true&sqlFormat=none&f=geojson';
+        // // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name%20IS%20NOT%20NULL&returnGeometry=true&f=geojson';
+
+        // map.on('load', function() {
+        //     window.setInterval(function() {
+        //         map.getSource('canada').setData(url);
+        //     }, 2000);
+    
+        //     map.addSource('canada', { type: 'geojson', data: url });
+        //     map.addLayer({
+        //         'id': 'canada',
+        //         'type': 'fill',
+        //         'source': 'canada',
+        //         'layout': {},
+        //         'paint': {'fill-color': '#088','fill-opacity': 0.8}
+        //     });
+        // });
     </script>
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
