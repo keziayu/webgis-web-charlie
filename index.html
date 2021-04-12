@@ -25,6 +25,7 @@
     <style>
         body { margin: 20; padding: 0; }
         #map { position: absolute; top: 0; bottom: 0; right: 30px; width: 100%; }
+
     </style>
 
     
@@ -460,7 +461,7 @@
                 function (error, image) {
                     if (error) throw error;
                     map.addImage('custom-marker', image);
-                    // Add a GeoJSON source with 2 points
+                    // Add a GeoJSON source 
                     map.addSource('points', {
                         'type': 'geojson',
                         'data': {
@@ -475,7 +476,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank'
+                                        'title': '7 Hills Community Pantry'
                                     }
                                 }, 
                                 {
@@ -487,7 +488,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank2'
+                                        'title': 'Alderville First Nation Community Food Bank'
                                     }
                                 },
                                 {
@@ -499,7 +500,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank3'
+                                        'title': 'Blessing Cupboard Colborne'
                                     }
                                 }, 
                                 {
@@ -511,7 +512,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank4'
+                                        'title': 'Brighton Fare Share Food Bank'
                                     }
                                 }, 
                                 {
@@ -523,7 +524,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank5'
+                                        'title': 'Campbellford Fare Share Food Bank'
                                     }
                                 }, 
                                 {
@@ -535,7 +536,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank6'
+                                        'title': 'Community Health Centres of Northumberland - Food Cupboard'
                                     }
                                 },
                                 {
@@ -547,7 +548,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank7'
+                                        'title': 'Community Works in Hamilton Township Food Bank'
                                     }
                                 }, 
                                 {
@@ -559,7 +560,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank8'
+                                        'title': 'Hastings & Roseneath Ministerial Food Bank'
                                     }
                                 }, 
                                 {
@@ -571,7 +572,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank9'
+                                        'title': 'Meals on Wheels'
                                     }
                                 },
                                 {
@@ -583,7 +584,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank10'
+                                        'title': 'Northumberland County Food For All'
                                     }
                                 },
                                 {
@@ -595,7 +596,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank11'
+                                        'title': 'Northumberland Fare Share Food Bank'
                                     }
                                 },
                                 {
@@ -607,7 +608,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank12'
+                                        'title': 'Northumberland Fare Share Food Banks'
                                     }
                                 },
                                 {
@@ -619,7 +620,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank13'
+                                        'title': 'Port Hope Salvation Army Community and Family Services'
                                     }
                                 },
                                 {
@@ -631,7 +632,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank14'
+                                        'title': 'Salvation Army (The) Community Food Cupboard'
                                     }
                                 },
                                 {
@@ -643,7 +644,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank15'
+                                        'title': 'Salvation Army Community and Family Service'
                                     }
                                 },
                                 {
@@ -655,7 +656,7 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Foodbank16'
+                                        'title': 'Society of St. Vincent de Paul'
                                     }
                                 },
                             ]
@@ -671,11 +672,12 @@
                             'icon-image': 'custom-marker',
                             // get the title name from the source's "title" property
                             'text-field': ['get','title'],
+                            'text-size': 10,
                             'text-font': [
                                 'Open Sans Semibold',
-                                'Arial Unicode MS Bold'
+                                'Arial Unicode MS Bold',
                             ],
-                            'text-offset': [0, 1.25],
+                            'text-offset': [0, 2],
                             'text-anchor': 'top'
                         }
                     });
