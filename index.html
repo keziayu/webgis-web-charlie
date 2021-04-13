@@ -1,0 +1,780 @@
+<<<<<<< HEAD
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Gemdev is Bootstrap HTML template that's very suitable for product, apps and startup websites. It features useful components to create a great online presentation for your project.">
+    <meta name="author" content="Inovatik">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image">
+
+    <!-- Webpage Title -->
+    <title>Sustainable Cobourg Web Map</title>
+    
+    <!-- Mapbox Script and style-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <style>
+        body { margin: 20; padding: 0; }
+        #map { position: absolute; top: 0; bottom: 0; right: 30px; width: 100%; }
+    </style>
+
+    
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/fontawesome-all.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
+	<link href="css/magnific-popup.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+<body data-spy="scroll" data-target=".fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+        <div class="container">
+            
+            <!-- Text Logo - Use this if you don't have a graphic logo -->
+            <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">😀 SC Boomer GIS</a> -->
+
+            <!-- Image Logo -->
+            <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.webp" alt="alternative"></a> 
+
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#details">Project <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#features">Method</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#about">About</a>
+                    </li>
+                </ul>
+                <span class="nav-item social-icons">
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-facebook-f fa-stack-1x"></i>
+                        </a>
+                    </span>
+                    <span class="fa-stack">
+                        <a href="#your-link">
+                            <i class="fas fa-circle fa-stack-2x"></i>
+                            <i class="fab fa-twitter fa-stack-1x"></i>
+                        </a>
+                    </span>
+                </span>
+            </div> <!-- end of navbar-collapse -->
+        </div> <!-- end of container -->
+    </nav> <!-- end of navbar -->
+    <!-- end of navigation -->
+
+
+    <!-- Header -->
+    <div class="header">
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="text-container">
+                        <h1 class="h1-large">Web Charlie X Mapbox to visualize Cobourg Food Supply Chains</h1>
+                        <p class="p-large">Now the members of Cobourg have a reliable, updatable web map to locate food banks and suppliers.</p>
+                        <a class="btn-solid-lg page-scroll" href="#statement">Discover</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6">
+                    <div class="image-container">
+                        <!-- The big image here was removed, we can put our own hero image for landing -->
+                        <!-- <img class="img-fluid" src="images/header-gem.svg" alt="alternative"> -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of header -->
+
+
+    <!-- Statement -->
+    <div id="statement" class="basic-1">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container">
+                        <h3>Food Resource Web Map</h3>
+                        <p class="p-large">Our goal is to set out and create a web map with local fresh food locations that is accessible to users on a responsive mobile platform. </p>
+                        <!-- <img src="images/statement.jpg" alt="alternative">
+                        <h6>Donna Staple, Founder</h6> -->
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of statement -->
+    
+    
+    <!-- Changes to be implemented below this line -->
+    <!-- Details 1 -->
+    <div id="details" class="basic-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xl-7">
+                    <div class="image-container">
+                        <div id="map"></div>
+                        <!-- <img class="img-fluid" src="images/details-1.svg" alt="alternative"> -->
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 col-xl-5">
+                    <div class="text-container">
+                        <h2>Food Map - Northumberland County, Ontario</h2>
+                        <p>At the height of Covid-19 pandemic around March 2020, the Northumberland County witnessed 
+                            the consequences of food deserts in their municipality on their citizens. The lack of access to fresh food 
+                            for food insecure persons led to Sustainable Cobourg’ call to action – to create an interactive webfriendly map for users and organizations to set up optimal locations for pop-up food distribution sites. </p>
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>Farmers Markets</strong> Regularly updated data for Farmers Markets location and information. The goal is to increase access to health fresh food for the local community. </div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>Food Banks</strong> Regularly updated data for Food Bank location and information to increase food availability. </div>
+                            </li>
+                        </ul> 
+                        <a class="btn-solid-reg popup-with-move-anim" href="#details-lightbox">Mapbox</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-2 -->
+    <!-- end of details 1 -->
+
+
+    <!-- Details Lightbox -->
+    <!-- Lightbox -->
+	<div id="details-lightbox" class="lightbox-basic zoom-anim-dialog mfp-hide">
+        <div class="row">
+            <button title="Close (Esc)" type="button" class="mfp-close x-button">×</button>
+			<div class="col-lg-8">
+                <div class="image-container">
+                    <img class="img-fluid" src="images/details-lightbox.jpg" alt="alternative">
+                </div> <!-- end of image-container -->
+			</div> <!-- end of col -->
+			<div class="col-lg-4">
+                <h3>Goals Setting ***************** DO we want to keep this?</h3>
+				<hr>
+                <p>Needing to put in our documentation in the place holder data.</p>
+                <h4>User Feedback</h4>
+                <p>We most liekly don't need user feedback.</p>
+                <ul class="list-unstyled li-space-lg">
+                    <li class="media">
+                        <i class="fas fa-check"></i><div class="media-body">Splash screen panel</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-check"></i><div class="media-body">Statistics graph report</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-check"></i><div class="media-body">Events calendar layout</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-check"></i><div class="media-body">Location details screen</div>
+                    </li>
+                    <li class="media">
+                        <i class="fas fa-check"></i><div class="media-body">Onboarding steps interface</div>
+                    </li>
+                </ul>
+                <a class="btn-solid-reg mfp-close page-scroll" href="#contact">Contact Us</a> <button class="btn-outline-reg mfp-close as-button" type="button">Back</button>
+			</div> <!-- end of col -->
+		</div> <!-- end of row -->
+    </div> <!-- end of lightbox-basic -->
+    <!-- end of lightbox -->
+    <!-- end of details lightbox -->
+
+
+    <!-- Details 2 Our Writing Section-->
+    <div class="basic-3">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-lg-6 col-xl-5"> -->
+                    <div class="text-container">
+                        <h2>Methodology</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minus, ab? Iste reiciendis unde nostrum molestiae consequatur mollitia, quisquam, provident perspiciatis reprehenderit accusamus ea animi, voluptas rem fugit tenetur itaque praesentium.</p>
+
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore eum veritatis dolores eveniet omnis iste nobis repudiandae assumenda animi quae, nisi illum ipsam natus sint, aut, alias architecto tempore vero.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore eum veritatis dolores eveniet omnis iste nobis repudiandae assumenda animi quae, nisi illum ipsam natus sint, aut, alias architecto tempore vero.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore eum veritatis dolores eveniet omnis iste nobis repudiandae assumenda animi quae, nisi illum ipsam natus sint, aut, alias architecto tempore vero.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore eum veritatis dolores eveniet omnis iste nobis repudiandae assumenda animi quae, nisi illum ipsam natus sint, aut, alias architecto tempore vero.</p>
+
+                        <ul class="list-unstyled li-space-lg">
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>For designers</strong> which have less data and operations</div>
+                            </li>
+                            <li class="media">
+                                <i class="fas fa-square"></i>
+                                <div class="media-body"><strong>For developers</strong> with a lot of data and daily inputs</div>
+                            </li>
+                        </ul> 
+                        <!-- <a class="btn-solid-reg" href="#your-link">Details</a> -->
+                    <!-- </div> end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-6 col-xl-7">
+                    <div class="image-container">
+                        <img class="img-fluid" src="images/dog-fire-this-is-fine.jpg" alt="Placeholder image">
+                    </div> <!-- end of image-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-3 -->
+    <!-- end of details 2 -->
+
+
+    <!-- Features -->
+    <div id="features" class="basic-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-download"></i>
+                        <h4>1</h4>
+                        <p>Get GeoJSON with query from REST endpoint...</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-cog"></i>
+                        <h4>2. Insall Mapbox GL JS</h4>
+                        <p>Add Mapbox to your app or website.</p>
+                        <p>1. Choose platform.</p>
+                        <p>2. Pick Method: HTML use the Mapbox calendar</p>
+                        <p>3. Install: Include the GL JS JavaScript and CSS files in the head section of your HTML file</p>
+                        <p>4. Create a map: Add the map yo your site with accessToken, and var map in script section. </p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-download"></i>
+                        <h4>3. Add GeoJSON to Map</h4>
+                        <p>Copy and paste...</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-cog"></i>
+                        <h4>4. Add Markers & Title Description</h4>
+                        <p>...</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-file-alt"></i>
+                        <h4>5. Add Popup Windows to Points</h4>
+                        <p>...</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-award"></i>
+                        <h4>6. Maintain</h4>
+                        <p>...</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-4 -->
+    <!-- end of features -->
+
+
+    <!-- About -->
+    <div id="about" class="basic-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-container">
+                        <h2>Meet The Team</h2>
+                        <p>SC GIS Squad</p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-5 -->
+    <!-- end of about -->
+
+     <!-- Features -->
+     <div id="features" class="basic-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Christopher Webb</h4>
+                        <p>GIS Applications Specialist</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Kezia Yu</h4>
+                        <p>GIS Cartographic Specialist</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-box bg-gray">
+                        <i class="fas fa-rocket"></i>
+                        <h4>Hong Lin (Jim) Wei</h4>
+                        <p>GIS Applications Specialist</p>
+                    </div> <!-- end of text-box -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-4 -->
+    <!-- end of features -->
+
+
+    <!-- Invitation -->
+    <div class="basic-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-container bg-gray">
+                        <h4>Gemdev is a well established web development framework dedicated to creatives and makers</h4>
+                        <a class="btn-solid-lg" href="#your-link">Details</a>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-6 -->
+    <!-- end of invitation -->
+
+    <!-- Footer -->
+    <div class="footer bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="social-container">
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-facebook-f fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-pinterest-p fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-instagram fa-stack-1x"></i>
+                            </a>
+                        </span>
+                        <span class="fa-stack">
+                            <a href="#your-link">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-youtube fa-stack-1x"></i>
+                            </a>
+                        </span>
+                    </div> <!-- end of social-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of footer -->  
+    <!-- end of footer -->
+
+
+    <!-- Copyright -->
+    <div class="copyright bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="p-small">Copyright © <a class="no-line" href="https://inovatik.com">Template by Inovatik</a></p>
+                </div> <!-- end of col -->
+            </div> <!-- enf of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of copyright --> 
+    <!-- end of copyright -->
+    
+    <style>
+        .mapboxgl-Popup {
+            max-width: 400px; 
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+    </style>
+        
+    	
+    <!-- Scripts -->
+    <script>
+        // Modified from: https://docs.mapbox.com/mapbox-gl-js/example/live-geojson/
+        // Make sure you use your own Access Token
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaG93ZTIwMjAiLCJhIjoiY2ttbDJub2dsMTZubjJxczJibXU4NnR6diJ9.feWhBPfoAnvhfdvsI2Odxg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/howe2020/ckmjpi3uc6mg417n4haddm7cg',
+            zoom: 9,
+            center: [-78.00, 44.10]
+        });
+
+        map.on('load', function () {
+            // Add an image to use as a custom marker
+            map.loadImage(
+                'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+                function (error, image) {
+                    if (error) throw error;
+                    map.addImage('custom-marker', image);
+                    // Add a GeoJSON source 
+                    map.addSource('points', {
+                        'type': 'geojson',
+                        'data': {
+                            'type': 'FeatureCollection',
+                            'features': [
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -77.884305, 44.200633
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': '7 Hills Community Pantry',
+                                        'description': "<strong>Address</strong>: 60 Main St. Trent Hills, ON; \
+                                        COVID19Operating as a call in and pick up operation. \
+                                        * Those in need in Warkworth and area can call 705-924-2077 \
+                                        and leave a message of what they require. Leave name and phone \
+                                        number to arrange time for order pick up at food bank door. \
+                                        * Please make arrangement for someone else to pick order up if they\
+                                         are feeling ill. Provides food for those in need."
+                                    }
+                                }, 
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.077844, 44.166839
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Alderville First Nation Community Food Bank',
+                                        'description': "<strong>Address</strong>: 8467 County Rd 45 Alnwick/Haldimand, ON; \
+                                        COVID19 Food orders will be filled and box of food will be left outside for pick up\
+                                         at arranged time.Community Food bank"
+                                    
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -77.883614, 44.006443
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Blessing Cupboard Colborne',
+                                        'description': "<strong>Address</strong>: 75 King Street E. Colborne ON; \
+                                        <strong>Hours:</strong>Sunday 11:30 am – 12:00 noon"
+                                    }
+                                }, 
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -77.73298, 44.042142
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Brighton Fare Share Food Bank',
+                                        'description': "<strong>Address</strong>: 39 A Elizabeth St. Brighton, ON; \
+                                        <strong>Hours:</strong>Food Distribution: first, second, fourth, fifth Mon of \
+                                        the month 9 am-12 noon * third Mon of the month 5:30 pm-8 pmFood Donations accepted:\
+                                         Wed 9 am-12 noonDates: All Year"
+                                    }
+                                }, 
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -77.796748, 44.307359
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Campbellford Fare Share Food Bank',
+                                        'description': "<strong>Address</strong>: 28 Doxsee Ave S. Campbellford, ON; \
+                                        <strong>Hours:</strong>Wednesday, 9:00 am – 11:30 am"
+                                    }
+                                }, 
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.316519, 43.956405
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Community Health Centres of Northumberland - Food Cupboard',
+                                        'description': "<strong>Address</strong>: 99 Toronto Road Port Hope, ON; \
+                                        By appointment only, Thursdays 1:30 pm to 4:00 pm."
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.328418, 44.083107
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Community Works in Hamilton Township Food Bank',
+                                        'description': "<strong>Address</strong>:Bewdley Community Centre; \
+                                        7060 Lake St, Hamilton (Township), ON; \
+                                        <strong>Hours:</strong>Thu 10 am-3 pmDates: All Year\
+                                        <strong>Description:</strong>COVID19 Food bank is open as a drive through only. \
+                                        * Pre-packaged food * Not accepting clothing, toys or household items donations \
+                                        at this time.Provides food only at this time. The clothing, children's toys and \
+                                        small household items operation is suspended until after the Community Centre is re-opened."
+                                    }
+                                }, 
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -77.958762, 44.311008
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Hastings & Roseneath Ministerial Food Bank',
+                                        'description': "<strong>Address</strong>: Trinity United Church; 3Albert St. W Trent Hills ON; \
+                                        First three Tue of the month 1 pm-2:30 pm, 6:30 pm-8 pmFood donations (please check expiry date) \
+                                        to be made outside food bank opening hours, by arrangement.Dates: Jan-mid Dec"
+                                    }
+                                }, 
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.195217, 43.970337
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Meals on Wheels',
+                                        'description': "<strong>Address</strong>: 1005 Elgin St W. Cobourg, ON; \
+                                        Community Care Northumberland. Currently delivering frozen meals only."
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.183294, 43.965653
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Northumberland County Food For All',
+                                        'description': "<strong>Address</strong>: 600 William St. Cobourg, ON;\
+                                        <strong>Hours:</strong> Mon-Fri 9am - 1pm"
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.160374, 43.973006
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Northumberland Fare Share Food Bank',
+                                        'description': "<strong>Address</strong>: 700 D'Arcy St. Cobourg, ON;\
+                                        <strong>Hours:</strong> Wed 10 am-12 noon, 6 pm-8 pm * Fri 10 am-12 \
+                                        noonDates: All Year"
+                                        	
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.29742, 43.953819
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Northumberland Fare Share Food Banks',
+                                        'description': "<strong>Address</strong>: Port Hope United Church; 34 South St. Port Hope, ON; \
+                                        <strong>Hours:</strong>Wed 10 am-12 noon, 6 pm-8 pmDates: All Year"
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.288489, 43.948906
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Port Hope Salvation Army Community and Family Services',
+                                        'description': "<strong>Address</strong>: 100 Peter Street, Upper Level Port Hope, ON; \
+                                        By appointment only Monday & Friday 9am - 1pm"
+                                        
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.163317, 43.961224
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Salvation Army (The) Community Food Cupboard',
+                                        'description': "<strong>Address</strong>: 66 Swayne St. Cobourg, ON; COVID19 Food cupboard program \
+                                        is currently suspended. The Food Cupboard's purpose is to make food accessible. \
+                                        * For those using the food cupboard proof of address is required (i.e. utility bill)\
+                                         * Bring your own bags."
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -77.793193, 44.310276
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Salvation Army Community and Family Service',
+                                        'description': "<strong>Address</strong>: 61B Ranney St. N Campbellford, ON; \
+                                        <strong>Hours</strong>Thursday, 10:00 am - 1:00 pm"
+                                    }
+                                },
+                                {
+                                    'type' : 'Feature', 
+                                    'geometry' : {
+                                        'type' : 'Point', 
+                                        'coordinates' : [
+                                        -78.167767, 43.964014
+                                        ]
+                                    }, 
+                                    'properties' : {
+                                        'title': 'Society of St. Vincent de Paul',
+                                        'description': "<strong>Address</strong>: 379 Division St S. Cobourg, ON; \
+                                        Provides emergency food vouchers for families in need."
+                                    }
+                                },
+                            ]
+                        }
+                    });
+
+                    // Add a symbol layer showing points
+                    map.addLayer({
+                        'id': 'points',
+                        'type': 'symbol',
+                        'source': 'points',
+                        'layout': {
+                            'icon-image': 'custom-marker',
+                            // get the title name from the source's "title" property
+                            'text-field': ['get','title'],
+                            'text-size': 10,
+                            'text-font': [
+                                'Open Sans Semibold',
+                                'Arial Unicode MS Bold',
+                            ],
+                            'text-offset': [0, 2],
+                            'text-anchor': 'top'
+                        }
+                    });
+
+                    // When a click event occurs on a feature in the places layer, open a popup at the location
+                    // of the feature, with description HTML from its properties
+                    map.on('click', 'points', function (e) {
+                        var coordinates = e.features[0].geometry.coordinates.slice();
+                        var description = e.features[0].properties.description;
+
+                        // Ensure that if the map is zoomed out such that multiple copies
+                        // of the feature are visible, the popup appears over the copy being pointed to
+                        while(Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                            coordinates[0] += e.lngLat.lng > coordinates[0]? 360 : -360;
+                        }
+                        new mapboxgl.Popup()
+                            .setLngLat(coordinates)
+                            .setHTML(description)
+                            .addTo(map);
+                        });
+
+                        // Change cursor to a pointer when the mouse is over the points layer
+                        map.on('mouseenter', 'points',function(){
+                            map.getCanvas().style.cursor = 'pointer';
+                        });
+
+                        // Change it back to a pointer when it leaves.
+                        map.on('mouseleave', 'points', function(){
+                            map.getCanvas().style.cursor = '';
+                        });
+                    
+                }
+            );
+        });
+        // // Modify this to place your own map service URL here. Show one or more provinces--do not just show Ontario like this example. 
+        // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name+IS+NOT+NULL&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&returnZ=false&returnM=false&returnExceededLimitFeatures=true&sqlFormat=none&f=geojson';
+        // // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name%20IS%20NOT%20NULL&returnGeometry=true&f=geojson';
+
+        // map.on('load', function() {
+        //     window.setInterval(function() {
+        //         map.getSource('canada').setData(url);
+        //     }, 2000);
+    
+        //     map.addSource('canada', { type: 'geojson', data: url });
+        //     map.addLayer({
+        //         'id': 'canada',
+        //         'type': 'fill',
+        //         'source': 'canada',
+        //         'layout': {},
+        //         'paint': {'fill-color': '#088','fill-opacity': 0.8}
+        //     });
+        // });
+    </script>
+    <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
+    <script src="js/bootstrap.min.js"></script> <!-- Bootstrap framework -->
+    <script src="js/jquery.easing.min.js"></script> <!-- jQuery Easing for smooth scrolling between anchors -->
+    <script src="js/swiper.min.js"></script> <!-- Swiper for image and text sliders -->
+    <script src="js/jquery.magnific-popup.js"></script> <!-- Magnific Popup for lightboxes -->
+    <script src="js/scripts.js"></script> <!-- Custom scripts -->
+</body>
+</html>
+>>>>>>> 781053c2faf656f5c48ac19b5b86622dc7f41a82
