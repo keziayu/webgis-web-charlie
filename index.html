@@ -25,7 +25,6 @@
     <style>
         body { margin: 20; padding: 0; }
         #map { position: absolute; top: 0; bottom: 0; right: 30px; width: 100%; }
-
     </style>
 
     
@@ -43,7 +42,6 @@
     <link rel="icon" href="images/favicon.png">
 </head>
 <body data-spy="scroll" data-target=".fixed-top">
-    
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
         <div class="container">
@@ -441,6 +439,13 @@
     </div> <!-- end of copyright --> 
     <!-- end of copyright -->
     
+    <style>
+        .mapboxgl-Popup {
+            max-width: 400px; 
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+    </style>
+        
     	
     <!-- Scripts -->
     <script>
@@ -476,7 +481,14 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': '7 Hills Community Pantry'
+                                        'title': '7 Hills Community Pantry',
+                                        'description': "<strong>Address</strong>: 60 Main St. Trent Hills, ON; \
+                                        COVID19Operating as a call in and pick up operation. \
+                                        * Those in need in Warkworth and area can call 705-924-2077 \
+                                        and leave a message of what they require. Leave name and phone \
+                                        number to arrange time for order pick up at food bank door. \
+                                        * Please make arrangement for someone else to pick order up if they\
+                                         are feeling ill. Provides food for those in need."
                                     }
                                 }, 
                                 {
@@ -488,7 +500,11 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Alderville First Nation Community Food Bank'
+                                        'title': 'Alderville First Nation Community Food Bank',
+                                        'description': "<strong>Address</strong>: 8467 County Rd 45 Alnwick/Haldimand, ON; \
+                                        COVID19 Food orders will be filled and box of food will be left outside for pick up\
+                                         at arranged time.Community Food bank"
+                                    
                                     }
                                 },
                                 {
@@ -500,7 +516,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Blessing Cupboard Colborne'
+                                        'title': 'Blessing Cupboard Colborne',
+                                        'description': "<strong>Address</strong>: 75 King Street E. Colborne ON; \
+                                        <strong>Hours:</strong>Sunday 11:30 am – 12:00 noon"
                                     }
                                 }, 
                                 {
@@ -512,7 +530,11 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Brighton Fare Share Food Bank'
+                                        'title': 'Brighton Fare Share Food Bank',
+                                        'description': "<strong>Address</strong>: 39 A Elizabeth St. Brighton, ON; \
+                                        <strong>Hours:</strong>Food Distribution: first, second, fourth, fifth Mon of \
+                                        the month 9 am-12 noon * third Mon of the month 5:30 pm-8 pmFood Donations accepted:\
+                                         Wed 9 am-12 noonDates: All Year"
                                     }
                                 }, 
                                 {
@@ -524,7 +546,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Campbellford Fare Share Food Bank'
+                                        'title': 'Campbellford Fare Share Food Bank',
+                                        'description': "<strong>Address</strong>: 28 Doxsee Ave S. Campbellford, ON; \
+                                        <strong>Hours:</strong>Wednesday, 9:00 am – 11:30 am"
                                     }
                                 }, 
                                 {
@@ -536,7 +560,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Community Health Centres of Northumberland - Food Cupboard'
+                                        'title': 'Community Health Centres of Northumberland - Food Cupboard',
+                                        'description': "<strong>Address</strong>: 99 Toronto Road Port Hope, ON; \
+                                        By appointment only, Thursdays 1:30 pm to 4:00 pm."
                                     }
                                 },
                                 {
@@ -548,7 +574,14 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Community Works in Hamilton Township Food Bank'
+                                        'title': 'Community Works in Hamilton Township Food Bank',
+                                        'description': "<strong>Address</strong>:Bewdley Community Centre; \
+                                        7060 Lake St, Hamilton (Township), ON; \
+                                        <strong>Hours:</strong>Thu 10 am-3 pmDates: All Year\
+                                        <strong>Description:</strong>COVID19 Food bank is open as a drive through only. \
+                                        * Pre-packaged food * Not accepting clothing, toys or household items donations \
+                                        at this time.Provides food only at this time. The clothing, children's toys and \
+                                        small household items operation is suspended until after the Community Centre is re-opened."
                                     }
                                 }, 
                                 {
@@ -560,7 +593,10 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Hastings & Roseneath Ministerial Food Bank'
+                                        'title': 'Hastings & Roseneath Ministerial Food Bank',
+                                        'description': "<strong>Address</strong>: Trinity United Church; 3Albert St. W Trent Hills ON; \
+                                        First three Tue of the month 1 pm-2:30 pm, 6:30 pm-8 pmFood donations (please check expiry date) \
+                                        to be made outside food bank opening hours, by arrangement.Dates: Jan-mid Dec"
                                     }
                                 }, 
                                 {
@@ -572,7 +608,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Meals on Wheels'
+                                        'title': 'Meals on Wheels',
+                                        'description': "<strong>Address</strong>: 1005 Elgin St W. Cobourg, ON; \
+                                        Community Care Northumberland. Currently delivering frozen meals only."
                                     }
                                 },
                                 {
@@ -584,7 +622,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Northumberland County Food For All'
+                                        'title': 'Northumberland County Food For All',
+                                        'description': "<strong>Address</strong>: 600 William St. Cobourg, ON;\
+                                        <strong>Hours:</strong> Mon-Fri 9am - 1pm"
                                     }
                                 },
                                 {
@@ -596,7 +636,11 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Northumberland Fare Share Food Bank'
+                                        'title': 'Northumberland Fare Share Food Bank',
+                                        'description': "<strong>Address</strong>: 700 D'Arcy St. Cobourg, ON;\
+                                        <strong>Hours:</strong> Wed 10 am-12 noon, 6 pm-8 pm * Fri 10 am-12 \
+                                        noonDates: All Year"
+                                        	
                                     }
                                 },
                                 {
@@ -608,7 +652,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Northumberland Fare Share Food Banks'
+                                        'title': 'Northumberland Fare Share Food Banks',
+                                        'description': "<strong>Address</strong>: Port Hope United Church; 34 South St. Port Hope, ON; \
+                                        <strong>Hours:</strong>Wed 10 am-12 noon, 6 pm-8 pmDates: All Year"
                                     }
                                 },
                                 {
@@ -620,7 +666,10 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Port Hope Salvation Army Community and Family Services'
+                                        'title': 'Port Hope Salvation Army Community and Family Services',
+                                        'description': "<strong>Address</strong>: 100 Peter Street, Upper Level Port Hope, ON; \
+                                        By appointment only Monday & Friday 9am - 1pm"
+                                        
                                     }
                                 },
                                 {
@@ -632,7 +681,11 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Salvation Army (The) Community Food Cupboard'
+                                        'title': 'Salvation Army (The) Community Food Cupboard',
+                                        'description': "<strong>Address</strong>: 66 Swayne St. Cobourg, ON; COVID19 Food cupboard program \
+                                        is currently suspended. The Food Cupboard's purpose is to make food accessible. \
+                                        * For those using the food cupboard proof of address is required (i.e. utility bill)\
+                                         * Bring your own bags."
                                     }
                                 },
                                 {
@@ -644,7 +697,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Salvation Army Community and Family Service'
+                                        'title': 'Salvation Army Community and Family Service',
+                                        'description': "<strong>Address</strong>: 61B Ranney St. N Campbellford, ON; \
+                                        <strong>Hours</strong>Thursday, 10:00 am - 1:00 pm"
                                     }
                                 },
                                 {
@@ -656,7 +711,9 @@
                                         ]
                                     }, 
                                     'properties' : {
-                                        'title': 'Society of St. Vincent de Paul'
+                                        'title': 'Society of St. Vincent de Paul',
+                                        'description': "<strong>Address</strong>: 379 Division St S. Cobourg, ON; \
+                                        Provides emergency food vouchers for families in need."
                                     }
                                 },
                             ]
@@ -681,6 +738,29 @@
                             'text-anchor': 'top'
                         }
                     });
+
+                    // When a click event occurs on a feature in the places layer, open a popup at the location
+                    map.on('click', 'points', function (e) {
+                        var coordinates = e.features[0].geometry.coordinates.slice();
+                        var description = e.features[0].properties.description;
+
+                        while(Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                            coordinates[0] += e.lngLat.lng > coordinates[0]? 360 : -360;
+                        }
+                        new mapboxgl.Popup()
+                            .setLngLat(coordinates)
+                            .setHTML(description)
+                            .addTo(map);
+                        });
+
+                        map.on('mouseenter', 'points',function(){
+                            map.getCanvas().style.cursor = 'pointer';
+                        });
+
+                        map.on('mouseleave', 'points', function(){
+                            map.getCanvas().style.cursor = '';
+                        });
+                    
                 }
             );
         });
