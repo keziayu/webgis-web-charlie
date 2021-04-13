@@ -624,9 +624,10 @@ input[type='checkbox'] {
 /*********************/
 /*     Details 1     */
 /*********************/
+/* Made a change here to compress things -Jim */
 .basic-2 {
-	padding-top: 3.75rem;
-	padding-bottom: 4.5rem;
+	padding-bottom: 0.5rem;
+	padding-top: 1rem;
 }
 
 .basic-2 .image-container {
@@ -1010,7 +1011,7 @@ a:hover.back-to-top {
 
 	/* Header */
 	.header {
-		padding-top: 8rem;
+		padding-top: 4rem;
 		padding-bottom: 14rem;
 	}
 
