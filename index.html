@@ -287,27 +287,31 @@
                     <div class="text-container">
                         <h2>Methodology</h2>
                         <p>Using the published web map from our Sustainable Cobourg’s ArcGIS Online account, we exported the food banks layer as a GeoJSON file and downloaded the file into our GitHub folder via VS Code. We stylized the basemap in Mapbox and added markers for each point along with popup windows for the properties of each point. Below will be a brief highlight of the steps that we took to come to our solution.</p>
-
+                        <hr>
                         <h4>Step 0</h4>
                         <p>Our initial step in creating the solution was to come up with a visually appealing basemap using Mapbox Studio. The team went with a blue monochrome color because it was simple and did not have distracting stylings. It was the easiest template to start working with. </p>
                         <div class="image-container">
                             <img class="img-fluid" src="images/monochrome.png" width="800" alt="Monochrome Colors">
                             <figcaption class="figure-caption">Blue is looking good!</figcaption>
                             <p></p> <!-- Need a line break here-->
+                            <hr>
                             <img class="img-fluid" src="images/mapboxstudio.jpg" width="800" alt="Mapbox Studio">
                             <figcaption class="figure-caption">Decsions had to be made to make sure no icons or cartographic features were sticking out of the ordinary. </figcaption>
                             <p></p> <!-- Need a line break here-->
+                            <hr>
                              <img class="img-fluid" src="images/Style.jpg" width="800" alt="Mapbox Style">
                             <figcaption class="figure-caption">Lastly, published the style in Mapbox studio and then we were ready to use the basemap!</figcaption>
                         </div>
+                        <hr>
 
                         <h4>Step 1</h4>
                         <p>From Sustainable Cobourg's ArcGIS Online account, we found the Project Cobourg Web Map. From there we went into the layers to retrieve the Food_Banks (0) Feature Server REST endpoint. This was followed by creating a Query for GeoJSON of the ArcGIS Online Food_Banks (0) FeatureServer. Once we received the GeoJSON return, we saved the output as a geojson file and placed into our repository on GitHub via VS Code.</p>
                         <div class="image-container">
                             <img class="img-fluid" src="images/RESTendpoint3.png" alt="RESTendpoint Query">
                             <p></p> <!-- Need a line break here-->
-                            <img class="img-fluid" src="images/geojson.jpg" alt="GeoJSON example">
+                            <img class="img-fluid" src="images/geojson2.jpg" alt="GeoJSON example">
                         </div>
+                        <hr>
                         <h4>Step 2</h4>
                         <p>Once the GeoJSON file was extracted and placed into our repository, we moved onto installing Mapbox to add to our web page. Here are the steps to "Install Mapbox GL JS: Add Mapbox to your app or website".</p>
                         <ul class="list-unstyled li-space-lg">
@@ -332,23 +336,28 @@
                         <div class="image-container">
                             <img class="img-fluid" src="images/mapboxInstall.png" alt="RESTendpoint Query">
                         </div>
+                        <hr>
                         <h4>Step 3</h4>
                         <p>Add mapboxgl.accessToken that was copied from Step 2 along with a variable for the map window. Here you can style the basemap and paste into link and set the zoom level as well as the center coordinates of your study area. We selected zoom 9 and centered it in Northumberland County. The blue monochromatic basemap was a custom style created by in Mapbox studio. Next, add GeoJSON that was queried from Step 1 into HTML web page under function map.AddSource.</p>
                             <div class="image-container">
                                 <img class="img-fluid" src="images/step3_code.PNG" alt="Add GeoJSON to HTML code">
                             </div>
+                            <hr>
                         <h4>Step 4</h4>
                         <p>Next, add Markers & Title Description for each point on the map. We customize the font size, family, offset from the default styling.</p>
                         <div class="image-container">
                             <img class="img-fluid" src="images/step4_code.PNG" alt="Add GeoJSON to HTML code">
                         </div>
+                        <hr>
                         <h4>Step 5</h4>
                         <p>Finally, add pop-up windows to points using attributes from properties section.</p>
                         <div class="image-container">
                             <img class="img-fluid" src="images/step5_code.png" alt="Add GeoJSON to HTML code">
                         </div>
+                        <hr>
                         <h4>Step 6</h4>
                         <p>Find workflow to automate updates. We found that integrating Mapbox Styling with Leaflet url input would be our best option moving forward.</p> 
+                        <hr>
 
                 </div> <!-- end of col -->
                 
