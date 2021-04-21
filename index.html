@@ -25,8 +25,9 @@
     <style>
         body { margin: 20; padding: 0; }
         #map { position: absolute; top: 0; bottom: 0; right: 30px; width: 100%; }
-        #north-county{ max-width: 65%; margin-bottom: 25px;}
+        #north-county{ max-width: 75%; margin-bottom: 25px;}
         #extra-space{ margin-bottom: 25px;}
+        /* #no-space {padding-top: 0rem; padding-bottom: 0rem;} */
         /* Should use this instead of the stray p tags */
         /* hr { width: 80%;  height: 20px;  margin-bottom: 7px;  margin-right: auto;  margin-left: auto;  margin-top: 9px; border-top: 1px solid white;}   */
     </style>
@@ -131,24 +132,36 @@
                 <p>
                   Currently in the municipality of Northumberland County there are no effective web-based applications that users can rely on to find fresh, local food. In March 2020, all thirteen Northumberland County foodbanks closed except for one location due to COVID-19 restrictions. This led to a disruption to the food distribution supply chain and confusion to food bank users. There was mass confusion about which food bank was still available, and which ones were closed. The confusion from the shutdown affected the vulnerable population and led to people not having access to food. With a current collaborative project partnered with Sustainable Cobourg underway, Web Charlie plans on bringing a new web-based food accessibility tool and solution to Northumberland County residents.
                 </p>
-                <img id="north-county" class="img-fluid" src="images/northumberland-social.jpg" alt="alternative">
+                <div class="image-container basic-5">
+                    <!-- <img id="north-county" class="img-fluid" src="images/northumberland-social.jpg" alt="alternative"> -->
+                    <img class="img-fluid" src="images/Northumberland3.PNG" alt="Northumberland County Study Area">
+                    <figcaption class="figure-caption">Northumberland County has 7 municipalities and it's located in Ontario, Canada</figcaption>
+                </div>
+
+                <br>
+
                 <h3>Problem Statement</h3>
                 <p class="p-large">Our goal is to set out and create a web map with local fresh food locations that is accessible to users on a responsive mobile platform.</p>
                 <ul class="list-unstyled li-space-lg">
                     <li class="media">
-                        <p><strong>Ideal: </strong> Users can go online in a mobile friendly web map to find fresh foods in the Cobourg area.</p>
+                        <p class="p-large"><strong>Ideal: </strong> Users can go online in a mobile friendly web map to find fresh foods in the Cobourg area.</p>
                     </li>
                     <li class="media">
-                        <p><strong>Reality: </strong> There is no web platform available for food availability in the Cobourg area.</p>
+                        <p class="p-large"><strong>Reality: </strong> There is no web platform available for food availability in the Cobourg area.</p>
                     </li>
                     <li class="media">
-                        <p><strong>Consequences: </strong> Users continue to lack support in finding food and failure to access food resources.</p>
+                        <p class="p-large"><strong>Consequences: </strong> Users continue to lack support in finding food and failure to access food resources.</p>
                     </li>
                     <li class="media">
-                        <p><strong>Proposal: </strong> Create a food bank web map that is accessible to users on a responsive mobile platform.</p>
+                        <p class="p-large"><strong>Proposal: </strong> Create a food bank web map that is accessible to users on a responsive mobile platform.</p>
                     </li>
                 </ul>
-              </div>
+                <div class="image-container basic-5">
+                    <img id="north-county" class="img-fluid" src="images/northumberland-social.jpg" alt="alternative">
+                    <!-- <img class="img-fluid" src="images/Northumberland3.PNG" alt="Northumberland County Study Area"> -->
+                    <figcaption class="figure-caption">Northumberland County has 7 municipalities and it's located in Ontario, Canada</figcaption>
+                </div>  
+            </div>
               <!-- end of text-container -->
             </div>
             <!-- end of col -->
@@ -166,9 +179,13 @@
             <div class="row">
                 <!-- <div class="col-lg-4"> -->
                     <div class="text-container">
-                        <h2>Journey</h2>
+                        <h2>Our Solution Journey </h2>
+
+                        <p>Over the span of couple weeks, our team tried different ways to implement the web solution. We came across some problems along the way and tried to find workarounds for our final product. This section will detail what we have tried and what we did to overcome the issue.</p>
+
                         <h4>Phase One: Mapbox & GeoJSON</h4>
-                            <p>From the client Sustainable Cobourg’s ArcGIS Online Web Map, we used the Food Banks layer to arrive at its ArcGIS REST Services Directory <a href="https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0" target="blank"><b>REST Endpoint</b></a>.</p>
+                            <p>From our partner Sustainable Cobourg’s ArcGIS Online Web Map, we were able to find a feature service layer at their ArcGIS REST Services Directory. <a href="https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0" target="blank"><b></b> ArcGIS REST Services Directory</a>. 
+                            </p>
 
                             <p><b>Problem: </b>The team attempted to use the geojson queried directly from the feature service offered by the client via arcgis online, but it was unsuccessful.</p>
                             <p>The advantage of this method is being able to get point data as well as the description directly from the source, instead of having to make changes.The issue was that the web request to the feature service layer was not configured properly and they could not be projected on the mapbox.</p>
