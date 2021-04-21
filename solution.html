@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Northumberland County Web Map">
+    <meta name="author" content="Web Charlie">
+
+    <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
+	<meta property="og:site_name" content="" /> <!-- website name -->
+	<meta property="og:site" content="" /> <!-- website link -->
+	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
+	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+	<meta name="twitter:card" content="summary_large_image">
+
+    <!-- Webpage Title -->
+    <title>Web Map Solution</title>
+    
+    <!-- Mapbox Script and style-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.js"></script>
+    <style>
+        #map { position: absolute; top: 0; bottom: 0; right: 30px; width: 100%; }
+        .mapboxgl-Popup {
+            max-width: 400px; 
+            font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+        }
+    </style>
+
+    <!-- Styles -->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.8.1/mapbox-gl.css" rel="stylesheet" />
+	
+	<!-- Favicon  -->
+    <link rel="icon" href="images/favicon.png">
+</head>
+
+    <div id="map"></div>
+    	
+    <!-- Scripts -->
+    <script>
+        // Modified from: https://docs.mapbox.com/mapbox-gl-js/example/live-geojson/
+        // Make sure you use your own Access Token
+        mapboxgl.accessToken = 'pk.eyJ1IjoiaG93ZTIwMjAiLCJhIjoiY2ttbDJub2dsMTZubjJxczJibXU4NnR6diJ9.feWhBPfoAnvhfdvsI2Odxg';
+        var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/howe2020/ckmjpi3uc6mg417n4haddm7cg',
+            zoom: 9,
+            center: [-78.00, 44.10]
+        });
+
+        map.on('load', function () {
+            // Add an image to use as a custom marker
+            map.loadImage(
+                'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+                function (error, image) {
+                    if (error) throw error;
+                    map.addImage('custom-marker', image);
+                    // Add a GeoJSON source 
+                    map.addSource('points', {
+                        'type': 'geojson',
+                        'data': {
+                            "type" : "FeatureCollection", 
+                            "features" : [
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -77.884305, 44.200633
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "7 Hills Community Pantry - 7 Hills Community Pantry", 
+                                    "Address" : "60 Main St", 
+                                    "City" : "Trent Hills", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Fri 11 am-12:30 pm Dates: All YearMeetings: Board meets monthly", 
+                                    "Phone" : "705-924-2077", 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003eOperating as a call in and pick up operation. * Those in need in Warkworth and area can call 705-924-2077 and leave a message of what they require. Leave name and phone number to arrange time for order pick up at food bank door. * Please make arrangement for someone else to pick order up if they are feeling ill. Provides food for those in need.", 
+                                    "Eligbility" : "No restrictions\u003cbr /\u003e\u003cbr /\u003eResidency Requirements: Warkworth and surrounding area", 
+                                    "DisabilityAccess" : "Fully Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.077844, 44.166839
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Alderville First Nation - Alderville Community Food Bank", 
+                                    "Address" : "8467 County Rd 45", 
+                                    "City" : "Alnwick/Haldimand", 
+                                    "Province" : "ON", 
+                                    "Hours" : "\u003cb\u003eCOVID19\u003c/b\u003e  Hours vary daily. Call ahead for food needs.Dates: Year round", 
+                                    "Phone" : "905-352-2140", 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003e Food orders will be filled and box of food will be left outside for pick up at arranged time.Community Food bank", 
+                                    "Eligbility" : "First Nation community. * Low income and or OW/ODSP recipients.", 
+                                    "DisabilityAccess" : "Fully Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -77.883614, 44.006443
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Blessing Cupboard, Colborne", 
+                                    "Address" : "75 King Street East", 
+                                    "City" : "Colborne", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Sunday 11:30 am – 12:00 noon", 
+                                    "Phone" : "905-355-2408, 905-207-0059", 
+                                    "Description" : "<strong>Description</strong>: Prospect Community Church", 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -77.73298, 44.042142
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Brighton Fare Share Food Bank - Brighton Fare Share Food Bank", 
+                                    "Address" : "39 A Elizabeth St", 
+                                    "City" : "Brighton", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Food Distribution: first, second, fourth, fifth Mon of the month 9 am-12 noon * third Mon of the month 5:30 pm-8 pmFood Donations accepted: Wed 9 am-12 noonDates: All Year", 
+                                    "Phone" : null, 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003e Food Bank remains open but clients will have their food brought to their car in the parking lot in a grocery cart.\n\u003cbr\u003e\n\u003cbr\u003eFood assistance to those in need", 
+                                    "Eligbility" : "Residents of The Municipality of Brighton", 
+                                    "DisabilityAccess" : "Partially Accessible - Parking - Not Accessible; Entrance - Useable; Washrooms - Not Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -77.796748, 44.307359
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Campbellford Fare Share Food Bank", 
+                                    "Address" : "28 Doxsee Avenue South (rear of building)", 
+                                    "City" : "Campbellford", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Wednesday, 9:00 am – 11:30 am", 
+                                    "Phone" : "705-653-1930", 
+                                    "Description" : "COVID19 Food bank remains open * one person at a time \n \nProvide food assistance to those in need \n* Offers information about other services and encouragement \n* Works together with area churches, the Salvation Army and Northumberland United Way to offer this service \n* Emergency services available.", 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.316519, 43.956405
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Community Health Centres of Northumberland - Food Cupboard", 
+                                    "Address" : "99 Toronto Road", 
+                                    "City" : "Port Hope", 
+                                    "Province" : "ON", 
+                                    "Hours" : "By appointment only, Thursdays 1:30 pm to 4:00 pm.", 
+                                    "Phone" : "905-885-2626 ext. 212", 
+                                    "Description" : "By appointment only. 1 person in the office at a time", 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.328418, 44.083107
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Community Works in Hamilton Township - Food Bank", 
+                                    "Address" : "Bewdley Community Centre; 7060 Lake St", 
+                                    "City" : "Hamilton (Township)", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Thu 10 am-3 pmDates: All Year", 
+                                    "Phone" : "905-797-2535 ext 22", 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003e Food bank is open as a drive through only. * Pre-packaged food * Not accepting clothing, toys or household items donations at this time.Provides food only at this time. The clothing, children's toys and small household items operation is suspended until after the Community Centre is re-opened.", 
+                                    "Eligbility" : "No restrictions", 
+                                    "DisabilityAccess" : "Fully Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -77.958762, 44.311008
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Hastings & Roseneath Ministerial Food Bank - Hastings & Roseneath Ministerial Food Bank", 
+                                    "Address" : "Trinity United Church; 3 Albert St W", 
+                                    "City" : "Trent Hills", 
+                                    "Province" : "ON", 
+                                    "Hours" : "First three Tue of the month 1 pm-2:30 pm, 6:30 pm-8 pmFood donations (please check expiry date) to be made outside food bank opening hours, by arrangement.Dates: Jan-mid Dec", 
+                                    "Phone" : null, 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003e Service by appointment only. Call 705-696-2295.\n\u003cbr\u003e\n\u003cbr\u003eFood bank provides clients with food for approximately 4 days.\n\u003cbr\u003e* Clients are asked to use the food bank only once a month\n\u003cbr\u003e* Occasionally baby food or formula is available", 
+                                    "Eligbility" : "No restrictions", 
+                                    "DisabilityAccess" : "Fully Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.195217, 43.970337
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Meals on Wheels", 
+                                    "Address" : "1005 Elgin St W", 
+                                    "City" : "Cobourg", 
+                                    "Province" : "ON", 
+                                    "Hours" : null, 
+                                    "Phone" : "1-866-514-5774.", 
+                                    "Description" : "Community Care Northumberland. Currently delivering frozen meals only.", 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.183294, 43.965653
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Northumberland County Food For All", 
+                                    "Address" : "600 William St", 
+                                    "City" : "Cobourg", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Mon-Fri 9 am-1 pm Dates: All Year", 
+                                    "Phone" : null, 
+                                    "Description" : null, 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.160374, 43.973006
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Northumberland Fare Share Food Banks - Northumberland Fare Share Food Banks, Cobourg", 
+                                    "Address" : "700 D'Arcy St", 
+                                    "City" : "Cobourg", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Wed 10 am-12 noon, 6 pm-8 pm * Fri 10 am-12 noonDates: All Year", 
+                                    "Phone" : " 905-372-5308", 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003e Delivery Model has changed. * Pick-up outside food bank only.Provide emergency food supplies on Wed and Fri Food donations accepted at the following Cobourg locations:* Metro (Northumberland Mall), 1111 Elgin St W* St Michael's Rectory, 379 Division St* Kawartha Credit Union, 2 King St W* Fisher's Foodland, 990 Division St* Cobourg Fire Department, 111 Elgin St E* David's No Frills, 500 Division St* York Super IDA Pharmacy, 500 Division St", 
+                                    "Eligbility" : "No restrictions", 
+                                    "DisabilityAccess" : "Not Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.29742, 43.953819
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Northumberland Fare Share Food Banks - Northumberland Fare Share Food Banks, Port Hope", 
+                                    "Address" : "Port Hope United Church; 34 South St", 
+                                    "City" : "Port Hope", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Wed 10 am-12 noon, 6 pm-8 pmDates: All YearMeetings: Board meetings are held in alternating communities on the second Thu of the month", 
+                                    "Phone" : "905-885-6674", 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003e Delivery Model has changed.* Pick-up outside food bank only.Provide emergency food supplies Wed to those in need.Food donations accepted at the following Port Hope locations: * Davis Your Independent Grocer, 20 Jocelyn St., Port hope* Port Hope United Church, 34 South St.* Food Basics, 125 Hope St S* Giant Tiger, 145 Peter St, Port Hope", 
+                                    "Eligbility" : "No restrictions", 
+                                    "DisabilityAccess" : "Partially Accessible - Parking - Useable; Entrance - Useable; Washrooms - Not Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.288489, 43.948906
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Port Hope Salvation Army Community and Family Services", 
+                                    "Address" : "100 Peter Street, Upper Level", 
+                                    "City" : "Port Hope", 
+                                    "Province" : "ON", 
+                                    "Hours" : "By appointment only Monday & Friday 9am - 1pm", 
+                                    "Phone" : "905-885-2323", 
+                                    "Description" : null, 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.163317, 43.961224
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Salvation Army (The) - Community Food Cupboard", 
+                                    "Address" : "66 Swayne St", 
+                                    "City" : "Cobourg", 
+                                    "Province" : "ON", 
+                                    "Hours" : "\u003cb\u003eCOVID19\u003c/b\u003e  Program suspendedDates: Year round", 
+                                    "Phone" : "905-373-9440", 
+                                    "Description" : "\u003cb\u003eCOVID19\u003c/b\u003eFood cupboard program is currently suspended. The Food Cupboard's purpose is to make food accessible. * For those using the food cupboard proof of address is required (i.e. utility bill) * Bring your own bags.", 
+                                    "Eligbility" : "Everyone must provide proof of address. Under the age of 18 must have proof of independence and address", 
+                                    "DisabilityAccess" : "Fully Accessible"
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -77.793193, 44.310276
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Salvation Army Community and Family Service", 
+                                    "Address" : "61B Ranney Street North", 
+                                    "City" : "Campbellford", 
+                                    "Province" : "ON", 
+                                    "Hours" : "Thursday, 10:00 am - 1:00 pm", 
+                                    "Phone" : "705-653-4185", 
+                                    "Description" : null, 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                }, 
+                                {
+                                "type" : "Feature", 
+                                "geometry" : 
+                                {
+                                    "type" : "Point", 
+                                    "coordinates" : [
+                                    -78.167767, 43.964014
+                                    ]
+                                }, 
+                                "properties" : {
+                                    "Name" : "Society of St. Vincent de Paul", 
+                                    "Address" : "379 Division St S", 
+                                    "City" : "Cobourg", 
+                                    "Province" : "ON", 
+                                    "Hours" : null, 
+                                    "Phone" : "905-373-2940", 
+                                    "Description" : "Provides emergency food vouchers for families in need.", 
+                                    "Eligbility" : null, 
+                                    "DisabilityAccess" : null
+                                }
+                                },
+                            ]
+                        }
+                    });
+
+                    // Add a symbol layer showing points
+                    map.addLayer({
+                        'id': 'points',
+                        'type': 'symbol',
+                        'source': 'points',
+                        'layout': {
+                            'icon-image': 'custom-marker',
+                            // get the title name from the source's "title" property
+                            'text-field': ['get','Name'],
+                            'text-size': 10,
+                            'text-font': [
+                                'Open Sans Semibold',
+                                'Arial Unicode MS Bold',
+                            ],
+                            'text-offset': [0, 2],
+                            'text-anchor': 'top'
+                        }
+                    });
+
+                    // When a click event occurs on a feature in the places layer, open a popup at the location
+                    // of the feature, with description HTML from its properties
+                    map.on('click', 'points', function (e) {
+                        var coordinates = e.features[0].geometry.coordinates.slice();
+                        var description = ('<strong>Address</strong>:' + e.features[0].properties.Address + ' (' + e.features[0].properties.City +')' + '<br>' + '<strong>Hours</strong>:' + e.features[0].properties.Hours + '<br>' + '<strong>Phone</strong>:' + e.features[0].properties.Phone + '<br>' + '<strong>Description</strong>:' + e.features[0].properties.Description);
+
+                        // Ensure that if the map is zoomed out such that multiple copies
+                        // of the feature are visible, the popup appears over the copy being pointed to
+                        while(Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                            coordinates[0] += e.lngLat.lng > coordinates[0]? 360 : -360;
+                        }
+                        new mapboxgl.Popup()
+                            .setLngLat(coordinates)
+                            .setHTML(description)
+                            .addTo(map);
+                        });
+
+                        // Change cursor to a pointer when the mouse is over the points layer
+                        map.on('mouseenter', 'points',function(){
+                            map.getCanvas().style.cursor = 'pointer';
+                        });
+
+                        // Change it back to a pointer when it leaves.
+                        map.on('mouseleave', 'points', function(){
+                            map.getCanvas().style.cursor = '';
+                        });
+                    
+                }
+            );
+        });
+        // // Modify this to place your own map service URL here. Show one or more provinces--do not just show Ontario like this example. 
+        // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name+IS+NOT+NULL&geometryType=esriGeometryEnvelope&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&returnGeometry=true&featureEncoding=esriDefault&multipatchOption=xyFootprint&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&returnZ=false&returnM=false&returnExceededLimitFeatures=true&sqlFormat=none&f=geojson';
+        // // var url = 'https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0/query?where=Name%20IS%20NOT%20NULL&returnGeometry=true&f=geojson';
+
+        // map.on('load', function() {
+        //     window.setInterval(function() {
+        //         map.getSource('canada').setData(url);
+        //     }, 2000);
+    
+        //     map.addSource('canada', { type: 'geojson', data: url });
+        //     map.addLayer({
+        //         'id': 'canada',
+        //         'type': 'fill',
+        //         'source': 'canada',
+        //         'layout': {},
+        //         'paint': {'fill-color': '#088','fill-opacity': 0.8}
+        //     });
+        // });
+    </script>
+</body>
+</html>
