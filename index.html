@@ -191,11 +191,28 @@
 
                         <h4>Phase Two: Mapbox</h4>
                             <p>Our goal is to automate the updated Foodbanks layer from ArcGIS Online and have that linked to the Mapbox map, where we won’t need to query for the GeoJSON and paste into Mapbox every time we have a new updated point. We want to be able to paste the REST endpoint URL into Mapbox instead of using GeoJSON. We are still figuring out the correct formatting to achieve this. This leads us to phase three, trying a different platform.</p>
+                            
+                            <div class="image-container">
+                                <p></p> <!-- Need a line break here-->
+                                <!-- <img class="img-fluid" src="images/feature-service1.jpg" alt=""> -->
+                                <img class="img-fluid" src="images/mapboxMap.PNG" width="600" alt="Web Response From Dev Tools">
+                                <figcaption class="figure-caption">A view of pop ups in mapbox</figcaption>
+                                <p></p> <!-- Need a line break here-->
+                            </div>
+
                             <hr>
 
                         <h4>Phase Three: Leaflet</h4>
                             <p>We turned to Leaflet to see how they implement feature layer as a URL. From <a href="https://esri.github.io/esri-leaflet/tutorials/create-your-first-app.html" target="blank"><b>this tutorial</b></a>, we were able to achieve pasting the REST endpoint URL and adding it to the map</p>
                             <p>From there, we added the <a href="https://esri.github.io/esri-leaflet/examples/feature-layer-popups.html" target="blank"><b>popup windows</b></a> popup windows and the properties that we wanted to display just to try.</p>
+
+                            <div class="image-container">
+                                <p></p> <!-- Need a line break here-->
+                                <!-- <img class="img-fluid" src="images/feature-service1.jpg" alt=""> -->
+                                <img class="img-fluid" src="images/leafletMap.PNG" width="600" alt="Web Response From Dev Tools">
+                                <figcaption class="figure-caption">Leaflet view with data straight from the feature service URL</figcaption>
+                                <p></p> <!-- Need a line break here-->
+                            </div>
 
                     </div> <!-- end of text-container -->
                 <!-- </div> end of col -->
