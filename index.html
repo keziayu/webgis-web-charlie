@@ -27,6 +27,8 @@
         #map { position: absolute; top: 0; bottom: 0; right: 30px; width: 100%; }
         #north-county{ max-width: 65%; margin-bottom: 25px;}
         #extra-space{ margin-bottom: 25px;}
+        /* Should use this instead of the stray p tags */
+        /* hr { width: 80%;  height: 20px;  margin-bottom: 7px;  margin-right: auto;  margin-left: auto;  margin-top: 9px; border-top: 1px solid white;}   */
     </style>
 
     
@@ -62,6 +64,9 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#details">Project <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="#journey">Journey</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link page-scroll" href="#features">Method</a>
@@ -116,7 +121,7 @@
     </div> <!-- end of header -->
 
     <!-- Details 1 -->
-    <div id="details" class="basic-2">
+    <div id="details" class="basic-3">
         <div class="container">
           <div class="row">
             <!-- end of col -->
@@ -158,10 +163,50 @@
       </div>
       <!-- end of basic-2 -->
       <!-- end of details 1 -->
-    
+
+    <!-- Journey -->
+    <div id="journey" class="basic-3">
+        <div class="container">
+            <div class="row">
+                <!-- <div class="col-lg-4"> -->
+                    <div class="text-container">
+                        <h2>Journey</h2>
+                        <h4>Phase One: Mapbox & GeoJSON</h4>
+                            <p>From the client Sustainable Cobourg’s ArcGIS Online Web Map, we used the Food Banks layer to arrive at its ArcGIS REST Services Directory <a href="https://services3.arcgis.com/KJrsq5lsoZHRcF4w/ArcGIS/rest/services/Food_Banks/FeatureServer/0" target="blank"><b>REST Endpoint</b></a>.</p>
+
+                            <p><b>Problem: </b>The team attempted to use the geojson queried directly from the feature service offered by the client via arcgis online, but it was unsuccessful.</p>
+                            <p>The advantage of this method is being able to get point data as well as the description directly from the source, instead of having to make changes.The issue was that the web request to the feature service layer was not configured properly and they could not be projected on the mapbox.</p>
+
+                            <div class="image-container">
+                                <p></p> <!-- Need a line break here-->
+                                <!-- <img class="img-fluid" src="images/feature-service1.jpg" alt=""> -->
+                                <img class="img-fluid" src="images/feature-service2.jpg" width="600" alt="Web Response From Dev Tools">
+                                <figcaption class="figure-caption">Our expected response was not correct!</figcaption>
+                                <p></p> <!-- Need a line break here-->
+                            </div>
+
+                            <p>From here we query for the GeoJSON to place into Mapbox map. Markers showed up and our next issue were the popup windows. Through Mapbox tutorials and research, we figured out the solution to display the specific attributes that we wanted from the properties section. We needed to configure the code from the tutorial slightly to fit our requirements and needs.</p>
+                            <p><b>Problem: </b>What we had trouble with was changing the marker symbols so that they cluster properly. </p>
+                            <hr>
+
+                        <h4>Phase Two: Mapbox</h4>
+                            <p>Our goal is to automate the updated Foodbanks layer from ArcGIS Online and have that linked to the Mapbox map, where we won’t need to query for the GeoJSON and paste into Mapbox every time we have a new updated point. We want to be able to paste the REST endpoint URL into Mapbox instead of using GeoJSON. We are still figuring out the correct formatting to achieve this. This leads us to phase three, trying a different platform.</p>
+                            <hr>
+
+                        <h4>Phase Three: Leaflet</h4>
+                            <p>We turned to Leaflet to see how they implement feature layer as a URL. From <a href="https://esri.github.io/esri-leaflet/tutorials/create-your-first-app.html" target="blank"><b>this tutorial</b></a>, we were able to achieve pasting the REST endpoint URL and adding it to the map</p>
+                            <p>From there, we added the <a href="https://esri.github.io/esri-leaflet/examples/feature-layer-popups.html" target="blank"><b>popup windows</b></a> popup windows and the properties that we wanted to display just to try.</p>
+
+                    </div> <!-- end of text-container -->
+                <!-- </div> end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-5 -->
+    <!-- end of about -->
+
     <!-- Changes to be implemented below this line -->
     <!-- Details 1 -->
-    <div id="details" class="basic-2">
+    <div class="basic-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6 col-xl-7">
@@ -463,7 +508,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <p class="p-small">Copyright © <a class="no-line" href="https://inovatik.com">Team Web Charlie - Fleming College</a></p>
+                    <p class="p-small">Copyright © <a class="no-line" href="https://www.geocommunity.net/">Team Web Charlie - Fleming College</a></p>
+                    <p class="p-small">Powered by<a class="no-line" href="https://inovatik.com">Inovatik</a></p>
                     <div class="image-container">
                         <img class="img-fluid" src="images/Fleming.svg" alt="Fleming College Logo" width="200">
                     </div> <!-- end of image-container -->
