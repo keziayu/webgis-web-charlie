@@ -219,8 +219,8 @@
                             <hr>
 
                         <h4>Phase Three: Leaflet</h4>
-                            <p>We turned to Leaflet to see how they implement feature layer as a URL. From <a href="https://esri.github.io/esri-leaflet/tutorials/create-your-first-app.html" target="blank"><b>this tutorial</b></a>, we were able to achieve pasting the REST endpoint URL and adding it to the map</p>
-                            <p>From there, we added the <a href="https://esri.github.io/esri-leaflet/examples/feature-layer-popups.html" target="blank"><b>popup windows</b></a> popup windows and the properties that we wanted to display just to try.</p>
+                        <p>Progressing with the project we looked for other ways we could improve the usability of our map in a mobile friendly way. We turned to Leaflet to see how they implement feature layer as a URL. From <a href="https://esri.github.io/esri-leaflet/tutorials/create-your-first-app.html" target="blank"><b>this tutorial</b></a>, we were able to achieve pasting the REST endpoint URL and adding it to the map.
+                            From there, we added the <a href="https://esri.github.io/esri-leaflet/examples/feature-layer-popups.html" target="blank"><b>popup windows</b></a> popup windows and the properties that we wanted to display just to try.</p>
 
                             <div class="image-container">
                                 <p></p> <!-- Need a line break here-->
@@ -245,7 +245,7 @@
     <div id="solution" class="basic-3">
         <div class="container">
              <div class="text-container">
-                <h2>Our Solution </h2>
+                <h2>Our Mapbox Solution </h2>
              </div>
             <div class="row">
                 <div class="col-lg-6 col-xl-7">
@@ -256,22 +256,22 @@
                 </div> <!-- end of col -->
                 <div class="col-lg-6 col-xl-5">
                     <div class="text-container">
-                        <h3>Food Map - Northumberland County, Ontario</h3>
+                        <h3>The Interactive Web-Map</h3>
                         <p>At the height of Covid-19 pandemic around March 2020, the Northumberland County witnessed 
                             the consequences of food deserts in their municipality on their citizens. The lack of access to fresh food 
                             for food insecure persons led to Sustainable Cobourg’ call to action – to create an interactive web friendly map for users and organizations to set up optimal locations for pop-up food distribution sites. </p>
                         <ul class="list-unstyled li-space-lg">
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body"><strong>Farmers Markets</strong> Regularly updated data for Farmers Markets location and information. The goal is to increase access to health fresh food for the local community. </div>
+                                <div class="media-body"><strong>Food Banks</strong> Regularly updated data for Food Bank location and information to increase food availability. </div>
                             </li>
                             <li class="media">
                                 <i class="fas fa-square"></i>
-                                <div class="media-body"><strong>Food Banks</strong> Regularly updated data for Food Bank location and information to increase food availability. </div>
+                                <div class="media-body"><strong>Responsive Design</strong> This website is responsive! You can resize the screen and view this solution on your mobile phone! To view it in full screen, click the blue button below.</div>
                             </li>
                         </ul> 
                         <!-- Shutting down the button until it's been fixed -->
-                        <a class="btn-solid-reg" target="blank" href="solution.html">Mapbox</a>
+                        <a class="btn-solid-reg" target="blank" href="solution.html">Launch Full Screen</a>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
@@ -287,6 +287,20 @@
                     <div class="text-container">
                         <h2>Methodology</h2>
                         <p>Using the published web map from our Sustainable Cobourg’s ArcGIS Online account, we exported the food banks layer as a GeoJSON file and downloaded the file into our GitHub folder via VS Code. We stylized the basemap in Mapbox and added markers for each point along with popup windows for the properties of each point. Below will be a brief highlight of the steps that we took to come to our solution.</p>
+
+                        <h4>Step 0</h4>
+                        <p>Our initial step in creating the solution was to come up with a visually appealing basemap using Mapbox Studio. The team went with a blue monochrome color because it was simple and did not have distracting stylings. It was the easiest template to start working with. </p>
+                        <div class="image-container">
+                            <img class="img-fluid" src="images/monochrome.png" width="800" alt="Monochrome Colors">
+                            <figcaption class="figure-caption">Blue is looking good!</figcaption>
+                            <p></p> <!-- Need a line break here-->
+                            <img class="img-fluid" src="images/mapboxstudio.jpg" width="800" alt="Mapbox Studio">
+                            <figcaption class="figure-caption">Decsions had to be made to make sure no icons or cartographic features were sticking out of the ordinary. </figcaption>
+                            <p></p> <!-- Need a line break here-->
+                             <img class="img-fluid" src="images/Style.jpg" width="800" alt="Mapbox Style">
+                            <figcaption class="figure-caption">Lastly, published the style in Mapbox studio and then we were ready to use the basemap!</figcaption>
+                        </div>
+
                         <h4>Step 1</h4>
                         <p>From Sustainable Cobourg's ArcGIS Online account, we found the Project Cobourg Web Map. From there we went into the layers to retrieve the Food_Banks (0) Feature Server REST endpoint. This was followed by creating a Query for GeoJSON of the ArcGIS Online Food_Banks (0) FeatureServer. Once we received the GeoJSON return, we saved the output as a geojson file and placed into our repository on GitHub via VS Code.</p>
                         <div class="image-container">
